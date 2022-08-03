@@ -6,10 +6,10 @@ function Banner() {
   return (
     <div className="flex h-auto flex-wrap items-center justify-center p-8">
       <div className="w-screen md:ml-20 md:w-1/3">
-        <h1 className="my-5 text-5xl font-bold text-primary md:text-7xl">
+        <h1 className="mb-[60px] text-5xl font-bold text-primary md:text-7xl">
           Reducing Risk
         </h1>
-        <p className="text-base text-[#10386b] md:text-3xl">
+        <p className="text-base mb-[60px] text-[#10386b] md:text-3xl">
           Gamified Software Solution for Unlocking Value in Chronic Disease
           Management
         </p>
