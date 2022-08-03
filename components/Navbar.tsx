@@ -23,11 +23,11 @@ export default function Navbar() {
     <Disclosure as="nav" className="bg-white">
       {({ open }) => (
         <>
-          <div className="max-w-[1920px] bg-white mx-auto px-2 sm:px-6 lg:px-8 py-6">
+          <div className="mx-auto max-w-[1920px] bg-white px-2 py-6 sm:px-6 lg:px-8">
             <div className="relative mx-0 flex h-16 items-center justify-between md:mx-20">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="text-gray-400 hover:bg-violet-700 hover:text-white focus:ring-white inline-flex items-center justify-center rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-inset">
+                <Disclosure.Button className="text-gray-400 hover:bg-violet-700 inline-flex items-center justify-center rounded-md p-2 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XIcon className="block h-6 w-6" aria-hidden="true" />
@@ -43,22 +43,28 @@ export default function Navbar() {
                   </h1>
                 </div>
                 <div className="hidden sm:ml-6 sm:block md:ml-60">
-                  <div className="flex space-x-4">
+                  <div className="flex space-x-4 items-center">
                     {navigation.map((item) => (
                       <a
                         key={item.name}
                         href={item.href}
                         className={classNames(
                           item.current
-                            ? 'text-white font-bold text-primary'
-                            : 'hover:text-primary text-secondary',
-                          'transition-colors text-md rounded-md px-3 py-2 font-medium'
+                            ? 'font-bold text-white text-primary'
+                            : 'text-secondary hover:text-primary',
+                          'text-md rounded-md px-3 py-2 font-medium transition-colors'
                         )}
                         aria-current={item.current ? 'page' : undefined}
                       >
                         {item.name}
                       </a>
                     ))}
+                    <a
+                      href="#!"
+                      className="min-w-[120px] cursor-pointer rounded-lg bg-secondary p-3 font-medium text-white transition-colors hover:bg-primary hover:shadow-xl text-center"
+                    >
+                      Request A Demo
+                    </a>
                   </div>
                 </div>
               </div>
