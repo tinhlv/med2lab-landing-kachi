@@ -4,8 +4,8 @@ import HeroImage from '../public/images/hero.png'
 
 function Banner() {
   return (
-    <div className="flex h-auto flex-wrap items-center justify-center p-8">
-      <div className="w-screen md:ml-20 md:w-1/3">
+    <div className="flex h-auto items-center justify-center p-8">
+      <div className="md:ml-20 md:w-1/3">
         <h1 className="mb-[60px] text-5xl font-bold text-primary md:text-7xl">
           Reducing Risk
         </h1>
@@ -20,7 +20,7 @@ function Banner() {
         </div>
       </div>
 
-      <div className="hidden lg:block">
+      <div className="hidden md:block">
         <Image
           src={HeroImage}
           width={900}
