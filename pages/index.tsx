@@ -12,7 +12,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/pro.ico" />
       </Head>
       <Navbar />
-      <MainPage />
+      <div className="main-content">
+        <MainPage />
+      </div>
       <Footer />
     </div>
   )

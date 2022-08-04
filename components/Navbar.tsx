@@ -10,7 +10,7 @@ const navigation = [
 
 export default function Navbar() {
   return (
-    <nav className="bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-900 fixed w-full z-20 top-0 left-0">
+    <nav className="bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 sticky top-0">
       <div className="container flex flex-wrap justify-between items-center mx-auto">
         <a href="https://flowbite.com/" className="flex items-center">
           <img src={LogoImage?.src} className="mr-3 h-6 sm:h-9" alt="Logo" />
