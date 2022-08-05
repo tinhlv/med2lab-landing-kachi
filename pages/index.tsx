@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import MainPage from './MainPage'
-import Footer from '../components/Footer'
+// import Footer from '../components/Footer'
 
 const Home: NextPage = () => {
   return (
@@ -15,7 +15,7 @@ const Home: NextPage = () => {
       <div className="main-content">
         <MainPage />
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }

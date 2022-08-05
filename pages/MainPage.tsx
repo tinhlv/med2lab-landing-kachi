@@ -5,7 +5,7 @@ import ReactFullpage from '@fullpage/react-fullpage'
 import { HomeSection, WhyKachiHealthSection } from '../components'
 
 function MainPage() {
-  const anchors = ['home', 'Why-KachiHealth']
+  const anchors = ['Home', 'WhyKachiHealth']
   return (
     <ReactFullpage
       anchors={anchors}
