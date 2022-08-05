@@ -1,5 +1,6 @@
-import Banner from './Banner'
+import HomeSection from './HomeSection'
 import Footer from './Footer'
 import Navbar from './Navbar'
+import WhyKachiHealthSection from './WhyKachiHealthSection'
 
-export { Banner, Footer, Navbar }
+export { HomeSection, WhyKachiHealthSection, Footer, Navbar }
