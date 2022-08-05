@@ -4,7 +4,7 @@ import HeroImage from '../public/images/hero.png'
 
 function Banner() {
   return (
-    <div className="flex h-auto items-center justify-center p-8">
+    <div className="flex h-auto items-center justify-center p-8" id="Home">
       <div className="md:ml-20 md:w-1/3">
         <h1 className="mb-[60px] text-4xl font-bold text-primary md:text-5xl">
           Unlocking Value in Chronic Disease Management

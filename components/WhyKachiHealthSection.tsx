@@ -6,7 +6,7 @@ import Image03 from '../public/images/pic-image-section2-3.png'
 
 function WhyKachiHealthSection() {
   return (
-    <div className="container mx-auto flex flex-wrap py-16">
+    <div className="container mx-auto flex flex-wrap py-16" id="WhyKachiHealth">
       <div className="blockItem py-0 md:py-12">
         <p className="mx-auto mb-12 text-center text-2xl">
           Our interactive curriculum empowers clinicians to{' '}
@@ -16,7 +16,7 @@ function WhyKachiHealthSection() {
           with <span className="text-primary">confidence</span> and{' '}
           <span className="text-primary">efficiency</span>{' '}
         </p>
-        <div className="flex flex-wrap h-auto items-center justify-center md:p-8">
+        <div className="flex flex-wrap h-auto items-center justify-center p-4 md:p-8">
           <div className="md:block">
             <Image
               src={Image01}
@@ -41,8 +41,8 @@ function WhyKachiHealthSection() {
         </div>
       </div>
       <div className="blockItem py-0 md:py-12">
-        <div className="flex flex-wrap h-auto items-center justify-center md:p-8">
-          <div className="md:w-1/3">
+        <div className="flex flex-wrap h-auto items-center justify-center p-4 md:p-8">
+          <div className="md:w-1/3 order-2 md:order-1">
             <h2 className="mb-5 sm:mb-10 md:mb-[60px] text-4xl font-bold text-primary md:text-5xl">
               Improving Documentation
             </h2>
@@ -56,7 +56,7 @@ function WhyKachiHealthSection() {
               documentation—saving clinicians valuable time and energy.
             </p>
           </div>
-          <div className="md:ml-20 md:block ">
+          <div className="md:ml-20 md:block order-1 md:order-2">
             <Image
               src={Image02}
               width={557}
@@ -68,8 +68,8 @@ function WhyKachiHealthSection() {
         </div>
       </div>
       <div className="blockItem py-0 md:py-12">
-        <div className="flex flex-wrap h-auto items-center justify-center md:p-8">
-          <div className="md:block">
+        <div className="flex flex-wrap h-auto items-center justify-center p-4 md:p-8">
+          <div className="md:block order-2 md:order-1">
             <Image
               src={Image03}
               width={557}
@@ -78,7 +78,7 @@ function WhyKachiHealthSection() {
               alt="hero img"
             />
           </div>
-          <div className="md:ml-20 md:w-1/3">
+          <div className="md:ml-20 md:w-1/3 order-1 md:order-2">
             <h2 className="mb-5 sm:mb-10 md:mb-[60px] text-4xl font-bold text-primary md:text-5xl">
               Gaining a Firm Grasp on Risk-Adjustment
             </h2>
