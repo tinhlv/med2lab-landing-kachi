@@ -20,10 +20,10 @@ function MainPage() {
 
         return (
           <ReactFullpage.Wrapper>
-            <div className="section">
+            <div className="section" id="Section1">
               <HomeSection />
             </div>
-            <div className="section">
+            <div className="section" id="Section2">
               <WhyKachiHealthSection />
             </div>
           </ReactFullpage.Wrapper>

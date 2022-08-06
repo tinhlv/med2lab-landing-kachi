@@ -1,72 +1,124 @@
+/* This example requires Tailwind CSS v2.0+ */
+import { Fragment } from 'react'
+import { Popover, Transition } from '@headlessui/react'
+import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import LogoImage from '../public/images/logo.png'
 
 const navigation = [
-  { name: 'Home', href: '#Home', current: true },
-  { name: 'Why KachiHealth?', href: '#WhyKachiHealth', current: false },
+  { name: 'Home', href: '#Section1', current: true },
+  { name: 'Why KachiHealth?', href: '#Section2', current: false },
   { name: 'Contact', href: '#', current: false },
   { name: 'Log In', href: '#', current: false },
   { name: 'About Us', href: '#', current: false },
 ]
 
-export default function Navbar() {
+export default function Example() {
   return (
-    <nav className="dark:bg-gray-900 animated fixed sticky top-0 left-0 top-0 z-20 w-full bg-white px-2 py-2.5 sm:px-4">
-      <div className="container mx-auto flex flex-wrap items-center justify-between">
-        <a href="https://flowbite.com/" className="flex items-center">
-          <img src={LogoImage?.src} className="mr-3 h-6 sm:h-9" alt="Logo" />
-        </a>
-        <div className="flex">
-          <div className="flex md:order-2">
-            <button
-              type="button"
-              className="min-w-[120px] cursor-pointer rounded-lg bg-primary p-3 text-center font-medium text-secondary transition-colors hover:bg-primary hover:shadow-xl"
-            >
-              Request A Demo
-            </button>
-            <button
-              data-collapse-toggle="navbar-sticky"
-              type="button"
-              className="text-gray-500 hover:bg-gray-100 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 inline-flex items-center rounded-lg p-2 text-sm focus:outline-none focus:ring-2 md:hidden"
-              aria-controls="navbar-sticky"
-              aria-expanded="false"
-            >
-              <span className="sr-only">Open main menu</span>
-              <svg
-                className="h-6 w-6"
-                aria-hidden="true"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </button>
-          </div>
-          <div
-            className="hidden w-full items-center md:order-1 md:flex md:w-auto"
-            id="navbar-sticky"
+    <div className="dark:bg-gray-900 animated fixed sticky top-0 left-0 top-0 z-20 w-full bg-white px-2 py-2.5 sm:px-4">
+      <div className="mx-auto max-w-7xl">
+        <div className="relative z-10 bg-white">
+          <svg
+            className="absolute inset-y-0 right-0 hidden h-full w-48 translate-x-1/2 transform text-white lg:block"
+            fill="currentColor"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+            aria-hidden="true"
           >
-            <ul className="bg-gray-50 border-gray-100 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 mt-4 flex flex-col rounded-lg border p-4 md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-white md:text-sm md:font-medium">
-              {navigation?.map(function (item, idx) {
-                return (
-                  <li key={idx}>
-                    <a
-                      href={item?.href}
-                      className="text-gray-700 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-gray-400 dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700 block rounded py-2 pr-4 pl-3 dark:hover:text-white md:p-0 md:dark:hover:text-white"
-                    >
-                      {item?.name}
+            <polygon points="50,0 100,0 50,100 0,100" />
+          </svg>
+
+          <Popover>
+            <div className="relative pt-6">
+              <nav
+                className="relative flex items-center justify-between sm:h-10"
+                aria-label="Global"
+              >
+                <div className="flex flex-shrink-0 flex-grow items-center lg:flex-grow-0">
+                  <div className="flex w-full items-center justify-between md:w-auto">
+                    <a href="#">
+                      <span className="sr-only">Med2lab</span>
+                      <img
+                        alt="Med2lab"
+                        className="h-8 w-auto sm:h-10"
+                        src={LogoImage?.src}
+                      />
                     </a>
-                  </li>
-                )
-              })}
-            </ul>
-          </div>
+                    <div className="-mr-2 flex items-center md:hidden">
+                      <button
+                        type="button"
+                        className="cursor-pointer rounded-lg bg-primary p-2 mr-4 text-center font-medium text-secondary transition-colors hover:bg-primary hover:shadow-xl md:hidden"
+                      >
+                        Request A Demo
+                      </button>
+                      <Popover.Button className="text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:ring-indigo-500 inline-flex items-center justify-center rounded-md bg-white p-2 focus:outline-none focus:ring-2 focus:ring-inset">
+                        <span className="sr-only">Open main menu</span>
+                        <MenuIcon className="h-6 w-6" aria-hidden="true" />
+                      </Popover.Button>
+                    </div>
+                  </div>
+                </div>
+                <div className="hidden md:ml-10 md:block md:space-x-8">
+                  {navigation.map((item) => (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      className="text-gray-500 hover:text-gray-900 font-medium"
+                    >
+                      {item.name}
+                    </a>
+                  ))}
+                  <button
+                    type="button"
+                    className="min-w-[120px] cursor-pointer rounded-lg bg-primary p-3 text-center font-medium text-secondary transition-colors hover:bg-primary hover:shadow-xl"
+                  >
+                    Request A Demo
+                  </button>
+                </div>
+              </nav>
+            </div>
+
+            <Transition
+              as={Fragment}
+              enter="duration-150 ease-out"
+              enterFrom="opacity-0 scale-95"
+              enterTo="opacity-100 scale-100"
+              leave="duration-100 ease-in"
+              leaveFrom="opacity-100 scale-100"
+              leaveTo="opacity-0 scale-95"
+            >
+              <Popover.Panel
+                focus
+                className="absolute inset-x-0 top-0 z-10 origin-top-right transform p-2 transition md:hidden"
+              >
+                <div className="ring-black overflow-hidden rounded-lg bg-white shadow-md ring-1 ring-opacity-5">
+                  <div className="flex items-center justify-between px-5 pt-4">
+                    <div>
+                      <img className="h-8 w-auto" src={LogoImage?.src} alt="" />
+                    </div>
+                    <div className="-mr-2">
+                      <Popover.Button className="text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:ring-indigo-500 inline-flex items-center justify-center rounded-md bg-white p-2 focus:outline-none focus:ring-2 focus:ring-inset">
+                        <span className="sr-only">Close main menu</span>
+                        <XIcon className="h-6 w-6" aria-hidden="true" />
+                      </Popover.Button>
+                    </div>
+                  </div>
+                  <div className="space-y-1 px-2 pt-2 pb-3">
+                    {navigation.map((item) => (
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        className="text-gray-700 hover:text-gray-900 hover:bg-gray-50 block rounded-md px-3 py-2 text-base font-medium"
+                      >
+                        {item.name}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </Popover.Panel>
+            </Transition>
+          </Popover>
         </div>
       </div>
-    </nav>
+    </div>
   )
 }
