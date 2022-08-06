@@ -6,7 +6,7 @@ import Image03 from '../public/images/pic-image-section2-3.png'
 
 function WhyKachiHealthSection() {
   return (
-    <div className="container mx-auto flex flex-wrap py-16" id="WhyKachiHealth">
+    <div className="container mx-auto flex flex-wrap py-16">
       <div className="blockItem py-0 md:py-12">
         <p className="mx-auto mb-12 text-center text-2xl">
           Our interactive curriculum empowers clinicians to{' '}
