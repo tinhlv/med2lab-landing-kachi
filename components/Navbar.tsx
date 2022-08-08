@@ -14,7 +14,7 @@ const navigation = [
 
 export default function Example() {
   return (
-    <div className="dark:bg-gray-900 animated fixed sticky top-0 left-0 top-0 z-20 w-full bg-white px-2 py-2.5 sm:px-4">
+    <div className="dark:bg-gray-900 animated fixed sticky top-0 left-0 top-0 z-20 w-full bg-white px-2 py-2.5 sm:px-4 shadow-sm">
       <div className="mx-auto max-w-7xl">
         <div className="relative z-10 bg-white">
           <svg
@@ -28,7 +28,7 @@ export default function Example() {
           </svg>
 
           <Popover>
-            <div className="relative pt-6">
+            <div className="relative py-2">
               <nav
                 className="relative flex items-center justify-between sm:h-10"
                 aria-label="Global"
