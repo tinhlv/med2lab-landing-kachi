@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useCallback, useRef } from 'react'
 import ReactFullpage from '@fullpage/react-fullpage'
 
 //components
@@ -9,6 +9,21 @@ import 'aos/dist/aos.css'
 
 function MainPage() {
   const anchors = ['home', 'why-kachi-health']
+  let ref = useRef();
+
+  // The scroll listener
+  const handleScroll = useCallback(() => {
+    console.log('scrolling')
+    AOS.refresh();
+  }, [])
+
+  // Attach the scroll listener to the div
+  useEffect(() => {
+    const divScroll = ref?.current
+    divScroll?.addEventListener('scroll', handleScroll)
+  }, [handleScroll])
+
+  //AOS config
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -19,13 +34,14 @@ function MainPage() {
       },
     })
   }, [])
+
   return (
     <ReactFullpage
       anchors={anchors}
       navigation
       navigationTooltips={anchors}
       scrollOverflowReset={true}
-      scrollingSpeed = {1000}
+      scrollingSpeed={1000}
       onLeave={() => {
         document
           .querySelectorAll('.fp-table.active .aos-init')
@@ -34,7 +50,7 @@ function MainPage() {
           })
       }}
       onSlideLeave={() => {
-        console.log("okokokkokoko");
+        console.log('okokokkokoko')
         document
           .querySelectorAll('.fp-table.active .aos-init')
           .forEach((el) => {
@@ -62,7 +78,7 @@ function MainPage() {
             <div className="section" data-anchor="home">
               <HomeSection />
             </div>
-            <div className="section" data-anchor="why-kachi-health">
+            <div className="section" data-anchor="why-kachi-health" ref={ref} style={{overflowX: "hidden"}}>
               <WhyKachiHealthSection />
             </div>
           </ReactFullpage.Wrapper>
