@@ -8,7 +8,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 
 function MainPage() {
-  const anchors = ['Home', 'WhyKachiHealth']
+  const anchors = ['home', 'why-kachi-health']
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -25,6 +25,7 @@ function MainPage() {
       navigation
       navigationTooltips={anchors}
       scrollOverflowReset={true}
+      scrollingSpeed = {1000}
       onLeave={() => {
         document
           .querySelectorAll('.fp-table.active .aos-init')
@@ -33,6 +34,7 @@ function MainPage() {
           })
       }}
       onSlideLeave={() => {
+        console.log("okokokkokoko");
         document
           .querySelectorAll('.fp-table.active .aos-init')
           .forEach((el) => {
@@ -55,13 +57,12 @@ function MainPage() {
       }}
       render={({ state, fullpageApi }) => {
         console.log('render prop change', state, fullpageApi) // eslint-disable-line no-console
-
         return (
           <ReactFullpage.Wrapper>
-            <div className="section" id="Section1">
+            <div className="section" data-anchor="home">
               <HomeSection />
             </div>
-            <div className="section" id="Section2">
+            <div className="section" data-anchor="why-kachi-health">
               <WhyKachiHealthSection />
             </div>
           </ReactFullpage.Wrapper>
