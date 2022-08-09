@@ -6,20 +6,20 @@ function Banner() {
   return (
     <div className="flex h-auto items-center justify-center p-8">
       <div className="md:ml-20 md:w-1/3">
-        <h1 className="mb-[60px] text-4xl font-bold text-primary md:text-5xl">
+        <h1 className="mb-[60px] text-4xl font-bold text-primary md:text-5xl" data-aos="fade-up">
           Unlocking Value in Chronic Disease Management
         </h1>
-        <p className="mb-[60px] text-base text-[#10386b] md:text-2xl">
+        <p className="mb-[60px] text-base text-[#10386b] md:text-2xl" data-aos="fade-up"  data-aos-delay="300">
           via Interactive and Engaging Online Training
         </p>
-        <div className="mt-12 flex items-end justify-start gap-5 text-center ">
+        <div className="mt-12 flex items-end justify-start gap-5 text-center" data-aos="fade-up"  data-aos-delay="600">
           <button className="min-w-[204px] cursor-pointer rounded-lg bg-secondary p-5 font-medium text-white transition-colors hover:bg-primary hover:shadow-xl">
             Request A Demo
           </button>
         </div>
       </div>
 
-      <div className="hidden md:block">
+      <div className="hidden md:block" data-aos="zoom-out">
         <Image
           src={HeroImage}
           width={720}

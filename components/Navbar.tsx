@@ -5,8 +5,8 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import LogoImage from '../public/images/logo.png'
 
 const navigation = [
-  { name: 'Home', href: '#Section1', current: true },
-  { name: 'Why KachiHealth?', href: '#Section2', current: false },
+  { name: 'Home', href: '#home', current: true },
+  { name: 'Why KachiHealth?', href: '#why-kachi-health', current: false },
   { name: 'Contact', href: '#', current: false },
   { name: 'Log In', href: '#', current: false },
   { name: 'About Us', href: '#', current: false },
@@ -14,7 +14,7 @@ const navigation = [
 
 export default function Example() {
   return (
-    <div className="dark:bg-gray-900 animated fixed sticky top-0 left-0 top-0 z-20 w-full bg-white px-2 py-2.5 sm:px-4">
+    <div className="dark:bg-gray-900 animated fixed sticky top-0 left-0 top-0 z-20 w-full bg-white px-2 py-2.5 shadow-sm sm:px-4">
       <div className="mx-auto max-w-7xl">
         <div className="relative z-10 bg-white">
           <svg
@@ -28,7 +28,7 @@ export default function Example() {
           </svg>
 
           <Popover>
-            <div className="relative pt-6">
+            <div className="relative py-2">
               <nav
                 className="relative flex items-center justify-between sm:h-10"
                 aria-label="Global"
@@ -46,7 +46,7 @@ export default function Example() {
                     <div className="-mr-2 flex items-center md:hidden">
                       <button
                         type="button"
-                        className="cursor-pointer rounded-lg bg-primary p-2 mr-4 text-center font-medium text-secondary transition-colors hover:bg-primary hover:shadow-xl md:hidden"
+                        className="mr-4 cursor-pointer rounded-lg bg-primary p-2 text-center font-medium text-secondary transition-colors hover:bg-primary hover:shadow-xl md:hidden"
                       >
                         Request A Demo
                       </button>
