@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback, useRef } from 'react'
+import React, { useEffect } from 'react'
 import ReactFullpage from '@fullpage/react-fullpage'
 
 //components
@@ -9,19 +9,6 @@ import 'aos/dist/aos.css'
 
 function MainPage() {
   const anchors = ['home', 'why-kachi-health']
-  let ref = useRef();
-
-  // The scroll listener
-  const handleScroll = useCallback(() => {
-    console.log('scrolling')
-    AOS.refresh();
-  }, [])
-
-  // Attach the scroll listener to the div
-  useEffect(() => {
-    const divScroll = ref?.current
-    divScroll?.addEventListener('scroll', handleScroll)
-  }, [handleScroll])
 
   //AOS config
   useEffect(() => {
@@ -50,7 +37,6 @@ function MainPage() {
           })
       }}
       onSlideLeave={() => {
-        console.log('okokokkokoko')
         document
           .querySelectorAll('.fp-table.active .aos-init')
           .forEach((el) => {
@@ -78,7 +64,7 @@ function MainPage() {
             <div className="section" data-anchor="home">
               <HomeSection />
             </div>
-            <div className="section" data-anchor="why-kachi-health" ref={ref} style={{overflowX: "hidden"}}>
+            <div className="section" data-anchor="why-kachi-health">
               <WhyKachiHealthSection />
             </div>
           </ReactFullpage.Wrapper>
