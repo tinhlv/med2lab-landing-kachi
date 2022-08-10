@@ -62,7 +62,7 @@ export default function Example() {
                     <a
                       key={item.name}
                       href={item.href}
-                      className="text-gray-500 hover:text-gray-900 font-medium"
+                      className="text-gray-500 hover:text-primary font-medium transition-colors"
                     >
                       {item.name}
                     </a>
