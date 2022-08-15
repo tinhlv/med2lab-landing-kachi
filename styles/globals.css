@@ -248,73 +248,39 @@ nav.scrolled {
 }
 
 /* Scroll Mouse */
-.icon-scroll,
-.icon-scroll:before {
+.arrow-scroll {
   position: absolute;
-  left: 50%;
-}
-.icon-scroll {
-  width: 30px;
-  height: 50px;
-  border: 2px solid #212121;
-  border-radius: 25px;
-  position: absolute;
-  bottom: 50px;
+  bottom: 100px;
   left: 50%;
   transform: translateX(-50%);
-  cursor: pointer;
 }
-@media (max-width: 767px) {
-  .icon-scroll {
-    position: relative;
-  }
+.arrow-scroll span {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-bottom: 5px solid #212121;
+  border-right: 5px solid #212121;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 2s infinite;
 }
-.icon-scroll:before {
-  content: "";
-  width: 8px;
-  height: 8px;
-  background: #212121;
-  margin-left: -4px;
-  top: 8px;
-  border-radius: 4px;
-  animation-duration: 1.5s;
-  animation-iteration-count: infinite;
-  animation-name: scroll;
+.arrow-scroll span:nth-child(2) {
+  animation-delay: -0.2s;
 }
-@keyframes scroll {
+.arrow-scroll span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+
+@keyframes animate {
   0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
     opacity: 1;
   }
   100% {
     opacity: 0;
-    transform: translateY(26px);
+    transform: rotate(45deg) translate(20px, 20px);
   }
-}
-
-/* Slick Slider Custom */
-.slick-prev {
-  left: 3% !important;
-  z-index: 1;
-}
-
-.slick-next {
-  right: 3% !important;
-  z-index: 1;
-}
-
-.custom-slick .slick-prev:before {
-  content: "";
-  width: 50px;
-  height: 50px;
-  background-image: url("../public/images/arrow-left.png");
-  background-size: contain;
-  display: block;
-}
-.custom-slick .slick-next:before {
-  content: "";
-  width: 50px;
-  height: 50px;
-  background-image: url("../public/images/arrow-right.png");
-  background-size: contain;
-  display: block;
 }
