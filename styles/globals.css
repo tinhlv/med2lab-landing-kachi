@@ -239,10 +239,82 @@ body {
 }
 
 nav {
-  z-index: 10
+  z-index: 10;
 }
 
 nav.scrolled {
   @apply shadow-2xl;
   border-bottom: 0px;
+}
+
+/* Scroll Mouse */
+.icon-scroll,
+.icon-scroll:before {
+  position: absolute;
+  left: 50%;
+}
+.icon-scroll {
+  width: 30px;
+  height: 50px;
+  border: 2px solid #212121;
+  border-radius: 25px;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .icon-scroll {
+    position: relative;
+  }
+}
+.icon-scroll:before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #212121;
+  margin-left: -4px;
+  top: 8px;
+  border-radius: 4px;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-name: scroll;
+}
+@keyframes scroll {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+}
+
+/* Slick Slider Custom */
+.slick-prev {
+  left: 3% !important;
+  z-index: 1;
+}
+
+.slick-next {
+  right: 3% !important;
+  z-index: 1;
+}
+
+.custom-slick .slick-prev:before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  background-image: url("../public/images/arrow-left.png");
+  background-size: contain;
+  display: block;
+}
+.custom-slick .slick-next:before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  background-image: url("../public/images/arrow-right.png");
+  background-size: contain;
+  display: block;
 }
