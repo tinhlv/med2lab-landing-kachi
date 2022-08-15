@@ -7,7 +7,7 @@ import { HomeSection, WhyKachiHealthSection } from '../components'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
-function MainPage() {
+export default function MainPage () {
   const anchors = ['home', 'why-kachi-health']
 
   //AOS config
@@ -71,5 +71,3 @@ function MainPage() {
     />
   )
 }
-
-export default MainPage
