@@ -28,7 +28,7 @@ function WhyKachiHealthSection() {
             <div
               className="md:block"
               data-aos="fade-right"
-              data-aos-delay="1000"
+              data-aos-delay="400"
               data-aos-anchor-placement="bottom-center"
             >
               <Image
@@ -42,7 +42,7 @@ function WhyKachiHealthSection() {
             <div
               className="md:ml-20 md:w-1/3"
               data-aos="fade-left"
-              data-aos-delay="1000"
+              data-aos-delay="400"
               data-aos-anchor-placement="bottom-center"
             >
               <h2 className="mb-5 text-4xl font-bold text-primary sm:mb-10 md:mb-[60px] md:text-5xl">
@@ -68,7 +68,6 @@ function WhyKachiHealthSection() {
             <div
               className="order-2 md:order-1 md:w-1/3"
               data-aos="fade-right"
-              data-aos-delay="500"
               data-aos-anchor-placement="center-center"
             >
               <h2 className="mb-5 text-4xl font-bold text-primary sm:mb-10 md:mb-[60px] md:text-5xl">
@@ -87,7 +86,6 @@ function WhyKachiHealthSection() {
             <div
               className="order-1 md:order-2 md:ml-20 md:block"
               data-aos="fade-left"
-              data-aos-delay="500"
               data-aos-anchor-placement="center-center"
             >
               <Image
@@ -110,7 +108,7 @@ function WhyKachiHealthSection() {
             <div
               className="order-2 md:order-1 md:block"
               data-aos="fade-right"
-              data-aos-delay="500"
+              data-aos-delay="300"
               data-aos-anchor-placement="center-center"
             >
               <Image
@@ -124,7 +122,7 @@ function WhyKachiHealthSection() {
             <div
               className="order-1 md:order-2 md:ml-20 md:w-1/3"
               data-aos="fade-left"
-              data-aos-delay="500"
+              data-aos-delay="300"
               data-aos-anchor-placement="center-center"
             >
               <h2 className="mb-5 text-4xl font-bold text-primary sm:mb-10 md:mb-[60px] md:text-5xl">
