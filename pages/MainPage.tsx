@@ -64,9 +64,7 @@ function MainPage() {
             <div className="section" data-anchor="home">
               <HomeSection />
             </div>
-            <div className="section" data-anchor="why-kachi-health">
-              <WhyKachiHealthSection />
-            </div>
+            <WhyKachiHealthSection />
           </ReactFullpage.Wrapper>
         )
       }}
