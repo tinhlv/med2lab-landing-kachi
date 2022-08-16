@@ -13,7 +13,7 @@ export default function MainPage () {
   //AOS config
   useEffect(() => {
     AOS.init({
-      duration: 1000,
+      duration: 500,
       easing: 'linear',
       disable: function () {
         var maxWidth = 1024
