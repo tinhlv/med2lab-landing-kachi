@@ -14,15 +14,15 @@ function WhyKachiHealthSection() {
         <div className="container mx-auto flex flex-wrap py-16">
           <p
             className="mx-auto mb-12 text-center text-3xl"
-            data-aos="fade-up"
-            data-aos-anchor-placement="bottom-center"
           >
-            Our interactive curriculum empowers clinicians to{' '}
-            <span className="text-primary">deliver the best care</span> for
-            patients
-            <br />
-            with <span className="text-primary">confidence</span> and{' '}
-            <span className="text-primary">efficiency</span>{' '}
+            <span data-aos="fade-up" data-aos-anchor-placement="bottom-center">Our interactive curriculum</span><br />
+            <span data-aos-delay="500" data-aos="fade-up" data-aos-anchor-placement="bottom-center">empowers clinicians to{' '}
+              <span className="text-primary">deliver the best care</span> for
+              patients
+              <br />
+              with <span className="text-primary">confidence</span> and{' '}
+              <span className="text-primary">efficiency</span>{' '}
+            </span>
           </p>
           <div className="flex h-auto flex-wrap items-center justify-center p-4 md:p-8">
             <div
