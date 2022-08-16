@@ -39,10 +39,13 @@ function Banner() {
           alt="hero img"
         />
       </div>
-      <a href="#why-kachi-health" className="arrow-scroll">
-        <span></span>
-        <span></span>
-      </a>
+      <div className="arrow-scroll">
+        <a href="#why-kachi-health">
+          <span className='text mb-2'>More</span>
+          <span className='arrow-scroll__item'></span>
+          <span className='arrow-scroll__item'></span>
+        </a>
+      </div>
     </div>
   )
 }

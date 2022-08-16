@@ -15,7 +15,7 @@ function WhyKachiHealthSection() {
           <p
             className="mx-auto mb-12 text-center text-3xl"
             data-aos="fade-up"
-            data-aos-anchor-placement="center-center"
+            data-aos-anchor-placement="bottom-center"
           >
             Our interactive curriculum empowers clinicians to{' '}
             <span className="text-primary">deliver the best care</span> for
@@ -28,7 +28,7 @@ function WhyKachiHealthSection() {
             <div
               className="md:block"
               data-aos="fade-right"
-              data-aos-delay="400"
+              data-aos-delay="1000"
               data-aos-anchor-placement="bottom-center"
             >
               <Image
@@ -42,7 +42,7 @@ function WhyKachiHealthSection() {
             <div
               className="md:ml-20 md:w-1/3"
               data-aos="fade-left"
-              data-aos-delay="400"
+              data-aos-delay="1000"
               data-aos-anchor-placement="bottom-center"
             >
               <h2 className="mb-5 text-4xl font-bold text-primary sm:mb-10 md:mb-[60px] md:text-5xl">
@@ -57,6 +57,12 @@ function WhyKachiHealthSection() {
               </p>
             </div>
           </div>
+          <a className="absolute inset-x-0 bottom-0 left-1/2 transform -translate-x-1/2 h-32 w-32 text-center" href="#why-kachi-health-content-1">
+            More
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </a>
         </div>
       </div>
       <div
@@ -68,7 +74,7 @@ function WhyKachiHealthSection() {
             <div
               className="order-2 md:order-1 md:w-1/3"
               data-aos="fade-right"
-              data-aos-anchor-placement="center-center"
+              data-aos-anchor-placement="bottom-center"
             >
               <h2 className="mb-5 text-4xl font-bold text-primary sm:mb-10 md:mb-[60px] md:text-5xl">
                 Improving Documentation
@@ -86,7 +92,7 @@ function WhyKachiHealthSection() {
             <div
               className="order-1 md:order-2 md:ml-20 md:block"
               data-aos="fade-left"
-              data-aos-anchor-placement="center-center"
+              data-aos-anchor-placement="bottom-center"
             >
               <Image
                 src={Image02}
@@ -97,6 +103,12 @@ function WhyKachiHealthSection() {
               />
             </div>
           </div>
+          <a className="absolute inset-x-0 bottom-0 left-1/2 transform -translate-x-1/2 h-32 w-32 text-center" href="#why-kachi-health-content-2">
+            More
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </a>
         </div>
       </div>
       <div
@@ -108,8 +120,7 @@ function WhyKachiHealthSection() {
             <div
               className="order-2 md:order-1 md:block"
               data-aos="fade-right"
-              data-aos-delay="300"
-              data-aos-anchor-placement="center-center"
+              data-aos-anchor-placement="bottom-center"
             >
               <Image
                 src={Image03}
@@ -122,8 +133,7 @@ function WhyKachiHealthSection() {
             <div
               className="order-1 md:order-2 md:ml-20 md:w-1/3"
               data-aos="fade-left"
-              data-aos-delay="300"
-              data-aos-anchor-placement="center-center"
+              data-aos-anchor-placement="bottom-center"
             >
               <h2 className="mb-5 text-4xl font-bold text-primary sm:mb-10 md:mb-[60px] md:text-5xl">
                 Gaining a Firm Grasp on Risk-Adjustment
