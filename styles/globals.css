@@ -250,18 +250,18 @@ nav.scrolled {
 /* Scroll Mouse */
 .arrow-scroll {
   position: absolute;
-  bottom: 70px;
+  bottom: 100px;
   left: 50%;
   transform: translateX(-50%);
 }
 .arrow-scroll .arrow-scroll__item {
   display: block;
-  width: 23px;
-  height: 23px;
-  border-bottom: 5px solid #212121;
-  border-right: 5px solid #212121;
+  width: 15px;
+  height: 15px;
+  border-bottom: 3px solid #212121;
+  border-right: 3px solid #212121;
   transform: rotate(45deg);
-  margin: -10px 6px;
+  margin: -3px 6px;
   animation: animate 2s infinite;
 }
 .arrow-scroll .arrow-scroll__item:nth-child(2) {
@@ -274,13 +274,13 @@ nav.scrolled {
 @keyframes animate {
   0% {
     opacity: 0;
-    transform: rotate(45deg) translate(-10px, -10px);
+    transform: rotate(45deg) translate(-5px, -5px);
   }
   50% {
     opacity: 1;
   }
   100% {
     opacity: 0;
-    transform: rotate(45deg) translate(10px, 10px);
+    transform: rotate(45deg) translate(5px, 5px);
   }
 }
