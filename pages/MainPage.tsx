@@ -14,7 +14,8 @@ export default function MainPage () {
   useEffect(() => {
     AOS.init({
       duration: 500,
-      easing: 'linear',
+      easing: 'ease-in',
+      animatedClassName: 'aos-animate',
       disable: function () {
         var maxWidth = 1024
         return window.innerWidth < maxWidth
