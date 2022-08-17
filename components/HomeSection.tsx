@@ -41,7 +41,7 @@ function Banner() {
       </div>
       <div className="arrow-scroll">
         <a href="#why-kachi-health">
-          <span className='text mb-2'>More</span>
+          <span className='text mb-2 block text-xs'>More</span>
           <span className='arrow-scroll__item'></span>
           <span className='arrow-scroll__item'></span>
         </a>
