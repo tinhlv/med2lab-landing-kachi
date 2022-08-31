@@ -163,6 +163,13 @@ function WhyKachiHealthSection() {
             </div>
           </div>
         </div>
+        <div className="arrow-scroll">
+          <a href="#contact">
+            <span className='text mb-2 block text-xs'>More</span>
+            <span className='arrow-scroll__item'></span>
+            <span className='arrow-scroll__item'></span>
+          </a>
+        </div>
       </div>
     </React.Fragment>
   )
