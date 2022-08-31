@@ -7,9 +7,9 @@ import LogoImage from '../public/images/logo.png'
 const navigation = [
   { name: 'Home', href: '#home', current: true },
   { name: 'Why KachiHealth?', href: '#why-kachi-health', current: false },
-  { name: 'Contact', href: '#', current: false },
-  { name: 'Log In', href: '#', current: false },
+  { name: 'Contact', href: '#contact', current: false },
   { name: 'About Us', href: '#', current: false },
+  { name: 'Log In', href: '#', current: false }
 ]
 
 export default function Example() {
@@ -35,7 +35,7 @@ export default function Example() {
               >
                 <div className="flex flex-shrink-0 flex-grow items-center lg:flex-grow-0">
                   <div className="flex w-full items-center justify-between md:w-auto">
-                    <a href="#">
+                    <a href="#home">
                       <span className="sr-only">Med2lab</span>
                       <img
                         alt="Med2lab"
@@ -62,7 +62,7 @@ export default function Example() {
                     <a
                       key={item.name}
                       href={item.href}
-                      className="text-gray-500 hover:text-primary font-medium transition-colors"
+                      className="text-gray-500 hover:text-primary font-medium transition-colors uppercase"
                     >
                       {item.name}
                     </a>
