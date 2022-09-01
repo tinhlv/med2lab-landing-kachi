@@ -2,13 +2,13 @@ import React, { useEffect } from 'react'
 import ReactFullpage from '@fullpage/react-fullpage'
 
 //components
-import { HomeSection, WhyKachiHealthSection } from '../components'
+import { HomeSection, WhyKachiHealthSection, ContactForm } from '../components'
 
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
 export default function MainPage () {
-  const anchors = ['home', 'why-kachi-health']
+  const anchors = ['home', 'why-kachi-health', 'why-kachi-health-content-1', 'why-kachi-health-content-2', 'why-kachi-health-content-3', 'contact']
 
   //AOS config
   useEffect(() => {
@@ -66,6 +66,7 @@ export default function MainPage () {
               <HomeSection />
             </div>
             <WhyKachiHealthSection />
+            <ContactForm />
           </ReactFullpage.Wrapper>
         )
       }}
