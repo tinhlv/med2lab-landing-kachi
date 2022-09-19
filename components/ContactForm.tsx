@@ -12,19 +12,19 @@ import * as Yup from 'yup';
 interface MyFormValues {
   Name: string;
   Email: string;
-  Message: string;
+  Content: string;
 }
 
 const initialValues: MyFormValues = {
   Name: '',
   Email: '',
-  Message: ''
+  Content: ''
 };
 
 const SignupSchema = Yup.object().shape({
   Name: Yup.string().required("This is field required!"),
   Email: Yup.string().email("Invalid email format").required("This is field required!"),
-  Message: Yup.string().required("This is field required!"),
+  Content: Yup.string().required("This is field required!"),
 });
 
 const ContactForm: React.FC<{}> = () => {
@@ -85,14 +85,11 @@ const ContactForm: React.FC<{}> = () => {
               validationSchema={SignupSchema}
               onSubmit={async (values, { resetForm }) => {
                 //params
-                const formData = new FormData();
-                formData.append("Name", values.Name);
-                formData.append("Email", values.Email);
-                formData.append("Message", values.Message);
+                const params = JSON.stringify(values, null, 2);
 
                 const response = await fetch(`https://stage.med2lab.com/api/auth/contact/`, {
                   method: "POST",
-                  body: formData,
+                  body: params,
                   headers: {
                     "Content-Type": "application/json",
                   },
@@ -144,15 +141,15 @@ const ContactForm: React.FC<{}> = () => {
                     <div className="w-full px-3">
                       <Field
                         type="text"
-                        id="Message"
-                        name="Message"
+                        id="Content"
+                        name="Content"
                         placeholder="Enter your Message *"
                         component="textarea"
                         rows="4"
-                        className={`appearance-none block w-full border ${errors.Message && touched.Message ? "border-[#dc3545]" : "border-[#e2e2e2]"} rounded py-3 px-4 focus:outline-none focus:bg-white focus:border-[#003D7C]`}
+                        className={`appearance-none block w-full border ${errors.Content && touched.Content ? "border-[#dc3545]" : "border-[#e2e2e2]"} rounded py-3 px-4 focus:outline-none focus:bg-white focus:border-[#003D7C]`}
                       />
-                      {errors.Message && touched.Message && (
-                        <div className="text-[#dc3545] mt-2 text-sm font-light">{errors.Message}</div>
+                      {errors.Content && touched.Content && (
+                        <div className="text-[#dc3545] mt-2 text-sm font-light">{errors.Content}</div>
                       )}
                     </div>
                   </div>
