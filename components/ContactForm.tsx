@@ -86,10 +86,12 @@ const ContactForm: React.FC<{}> = () => {
               onSubmit={async (values, { resetForm }) => {
                 //params
                 const params = JSON.stringify(values, null, 2);
+                const objParams = JSON.parse(params);
+                const newParams = { ...(objParams as String), Product: "Kachi" }
 
                 const response = await fetch(`https://stage.med2lab.com/api/auth/contact/`, {
                   method: "POST",
-                  body: params,
+                  body: JSON.stringify(newParams),
                   headers: {
                     "Content-Type": "application/json",
                   },
