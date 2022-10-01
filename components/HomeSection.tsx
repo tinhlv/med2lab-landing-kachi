@@ -25,7 +25,7 @@ function Banner() {
           data-aos-delay="600"
         >
           <button className="min-w-[204px] cursor-pointer rounded-lg bg-secondary p-5 font-medium text-white transition-colors hover:bg-primary hover:shadow-xl">
-            Request A Demo
+            Register for FREE Demo
           </button>
         </div>
       </div>

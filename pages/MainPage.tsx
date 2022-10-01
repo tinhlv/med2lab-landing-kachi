@@ -2,7 +2,12 @@ import React, { useEffect } from 'react'
 import ReactFullpage from '@fullpage/react-fullpage'
 
 //components
-import { HomeSection, WhyKachiHealthSection, ContactForm } from '../components'
+import { 
+  HomeSection,
+  WhyKachiHealthSection,
+  ContactForm,
+  FormRegister
+} from '../components'
 
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -54,6 +59,7 @@ export default function MainPage() {
               <HomeSection />
             </div>
             <WhyKachiHealthSection />
+            <FormRegister />
             <ContactForm />
           </ReactFullpage.Wrapper>
         )

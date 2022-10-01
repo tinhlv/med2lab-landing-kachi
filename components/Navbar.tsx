@@ -35,7 +35,7 @@ export default function Example() {
               >
                 <div className="flex flex-shrink-0 flex-grow items-center lg:flex-grow-0">
                   <div className="flex w-full items-center justify-between md:w-auto">
-                    <a href="#home">
+                    <a href="#register">
                       <span className="sr-only">Med2lab</span>
                       <img
                         alt="Med2lab"
@@ -44,12 +44,12 @@ export default function Example() {
                       />
                     </a>
                     <div className="-mr-2 flex items-center md:hidden">
-                      <button
-                        type="button"
-                        className="mr-4 cursor-pointer rounded-lg bg-primary p-2 text-center font-medium text-secondary transition-colors hover:bg-primary hover:shadow-xl md:hidden"
+                      <a
+                        href='#register'
+                        className="min-w-[120px] cursor-pointer rounded-lg bg-primary p-3 text-center font-medium text-white transition-colors hover:bg-primary hover:shadow-xl"
                       >
-                        Request A Demo
-                      </button>
+                        REGISTER
+                      </a>
                       <Popover.Button className="text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:ring-indigo-500 inline-flex items-center justify-center rounded-md bg-white p-2 focus:outline-none focus:ring-2 focus:ring-inset">
                         <span className="sr-only">Open main menu</span>
                         <MenuIcon className="h-6 w-6" aria-hidden="true" />
@@ -67,12 +67,12 @@ export default function Example() {
                       {item.name}
                     </a>
                   ))}
-                  <button
-                    type="button"
-                    className="min-w-[120px] cursor-pointer rounded-lg bg-primary p-3 text-center font-medium text-secondary transition-colors hover:bg-primary hover:shadow-xl"
+                  <a
+                    href='#register'
+                    className="min-w-[120px] cursor-pointer rounded-lg bg-primary p-3 text-center font-medium text-white transition-colors hover:bg-primary hover:shadow-xl"
                   >
-                    Request A Demo
-                  </button>
+                    REGISTER
+                  </a>
                 </div>
               </nav>
             </div>
