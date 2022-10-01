@@ -9,7 +9,7 @@ const navigation = [
   { name: 'Why KachiHealth?', href: '#why-kachi-health', current: false },
   { name: 'Contact', href: '#contact', current: false },
   { name: 'About Us', href: '#', current: false },
-  { name: 'Log In', href: '#', current: false }
+  { name: 'Log In', href: 'http://dev-us.med2lab.com/kachi-health/login', current: false }
 ]
 
 export default function Example() {
