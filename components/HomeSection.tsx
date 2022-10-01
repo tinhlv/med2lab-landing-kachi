@@ -22,9 +22,9 @@ function Banner() {
 						data-aos="fade-up"
 						data-aos-delay="600"
 					>
-						<button className="min-w-[204px] cursor-pointer rounded-lg bg-secondary p-5 font-medium text-white transition-colors hover:bg-primary hover:shadow-xl">
+						<a href='#register' className="min-w-[204px] cursor-pointer rounded-lg bg-secondary p-5 font-medium text-white transition-colors hover:bg-primary hover:shadow-xl">
 							Register for FREE Demo
-						</button>
+						</a>
 					</div>
 				</div>
 				<div className="hidden md:block" data-aos="fade-in">
