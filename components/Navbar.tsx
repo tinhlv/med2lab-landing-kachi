@@ -15,7 +15,7 @@ const navigation = [
 export default function Example() {
   return (
     <div className="dark:bg-gray-900 animated fixed sticky top-0 left-0 top-0 z-20 w-full bg-white px-2 py-2.5 shadow-sm sm:px-4">
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto container">
         <div className="relative z-10 bg-white">
           <svg
             className="absolute inset-y-0 right-0 hidden h-full w-48 translate-x-1/2 transform text-white lg:block"

@@ -143,7 +143,7 @@ function WhyKachiHealthSection() {
 					</div>
 				</div>
 				<div className="arrow-scroll">
-					<a href="#contact">
+					<a href="#register">
 						<span className="text mb-2 block text-xs">More</span>
 						<span className="arrow-scroll__item" />
 						<span className="arrow-scroll__item" />

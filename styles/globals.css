@@ -248,6 +248,8 @@ nav.scrolled {
 }
 
 /* Scroll Mouse */
+
+/* Scroll Mouse */
 .arrow-scroll {
   position: absolute;
   bottom: 100px;
@@ -263,6 +265,10 @@ nav.scrolled {
   transform: rotate(45deg);
   margin: -3px 6px;
   animation: animate 2s infinite;
+}
+.arrow-scroll .arrow-scroll__item.arrow-border-white {
+  border-bottom: 3px solid #fff;
+  border-right: 3px solid #fff;
 }
 .arrow-scroll .arrow-scroll__item:nth-child(2) {
   animation-delay: -0.2s;
