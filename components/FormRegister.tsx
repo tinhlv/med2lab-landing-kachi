@@ -225,7 +225,7 @@ const FormRegister: React.FC<{}> = () => {
                                                     )}
                                                     REGISTER FOR DEMO
                                                 </button>
-                                                <p className='mt-3 text-center'>Already have an account? <a className="text-[#003D7C]" href="http://dev-us.med2lab.com/nus/login">Click here</a> to log in</p>
+                                                <p className='mt-3 text-center'>Already have an account? <a className="text-[#003D7C]" href="http://dev-us.med2lab.com/kachi-health/login">Click here</a> to log in</p>
                                             </div>
                                         )}
                                     </Form>
