@@ -1,21 +1,24 @@
-import React, { useEffect } from 'react'
-import ReactFullpage from '@fullpage/react-fullpage'
+import React, { useEffect } from 'react';
+import ReactFullpage from '@fullpage/react-fullpage';
 
 //components
-import { 
-  HomeSection,
-  WhyKachiHealthSection,
-  ContactForm,
-  FormRegister
-} from '../components'
+import { HomeSection, WhyKachiHealthSection, ContactForm, FormRegister } from '../components';
 
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function MainPage() {
-  const anchors = ['home', 'why-kachi-health', 'why-kachi-health-content-1', 'why-kachi-health-content-2', 'why-kachi-health-content-3', 'register', 'contact']
+	const anchors = [
+		'home',
+		'why-kachi-health',
+		'why-kachi-health-content-1',
+		'why-kachi-health-content-2',
+		'why-kachi-health-content-3',
+		'register',
+		'contact'
+	];
 
-  //AOS config
+	//AOS config
 	useEffect(() => {
 		AOS.init({
 			duration: 500,
@@ -30,34 +33,36 @@ export default function MainPage() {
 		});
 	}, []);
 
-  return (
-    <ReactFullpage
-      anchors={anchors}
-      navigation
-      navigationTooltips={anchors}
-      scrollOverflowReset={true}
-      scrollingSpeed={1000}
-      onSlideLeave={() => {
-        document.querySelectorAll('.fp-table.active .aos-init').forEach((el) => {
-          el.classList.remove('aos-animate');
-        });
-      }}
-      afterLoad={() => {
-        document.querySelectorAll('.fp-table.active .aos-init').forEach((el) => {
-          el.classList.add('aos-animate');
-        });
-      }}
-      render={({ state, fullpageApi }) => {
-        console.log('render prop change', state, fullpageApi) // eslint-disable-line no-console
-        return (
-          <ReactFullpage.Wrapper>
-            <HomeSection />
-            <WhyKachiHealthSection />
-            <FormRegister />
-            <ContactForm />
-          </ReactFullpage.Wrapper>
-        )
-      }}
-    />
-  )
+	return (
+		<ReactFullpage
+			anchors={anchors}
+			navigation
+			navigationTooltips={anchors}
+			scrollOverflowReset={true}
+			scrollingSpeed={1000}
+			onSlideLeave={() => {
+				document.querySelectorAll('.fp-table.active .aos-init').forEach((el) => {
+					el.classList.remove('aos-animate');
+				});
+			}}
+			afterLoad={() => {
+				document.querySelectorAll('.fp-table.active .aos-init').forEach((el) => {
+					el.classList.add('aos-animate');
+				});
+			}}
+			render={({ state, fullpageApi }) => {
+				console.log('render prop change', state, fullpageApi); // eslint-disable-line no-console
+				return (
+					<div className="main-content">
+						<ReactFullpage.Wrapper>
+							<HomeSection />
+							<WhyKachiHealthSection />
+							<FormRegister />
+							<ContactForm />
+						</ReactFullpage.Wrapper>
+					</div>
+				);
+			}}
+		/>
+	);
 }
