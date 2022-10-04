@@ -21,7 +21,9 @@ const Home: NextPage = () => {
         />
       </Head>
       <Navbar />
-      <MainPage />
+      <div className="main-content">
+        <MainPage />
+      </div>
       <noscript
         dangerouslySetInnerHTML={{
           __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PB3SQG5" height="0" width="0" style="display: none; visibility: hidden;" />`,
