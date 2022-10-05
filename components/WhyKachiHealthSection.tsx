@@ -32,7 +32,15 @@ function WhyKachiHealthSection() {
 				<div className="container mx-auto flex flex-wrap py-16">
 					<div className="flex h-auto flex-wrap items-center justify-center p-4 md:p-8">
 						<div className="md:block" data-aos="fade-right" data-aos-anchor-placement="bottom-center">
-							<Image src={Image01} width={557} height={372} objectFit="contain" alt="hero img" />
+							<Image 
+								src={Image01}
+								width={557}
+								height={372}
+								objectFit="contain"
+								alt="hero img"
+								placeholder="blur"
+								priority
+							/>
 						</div>
 						<div className="md:ml-20 md:w-1/3">
 							<h2
@@ -95,7 +103,15 @@ function WhyKachiHealthSection() {
 							data-aos="fade-left"
 							data-aos-anchor-placement="bottom-center"
 						>
-							<Image src={Image02} width={557} height={372} objectFit="contain" alt="hero img" />
+							<Image 
+								src={Image02}
+								width={557}
+								height={372}
+								objectFit="contain"
+								alt="hero img"
+								placeholder="blur"
+								priority
+							/>
 						</div>
 					</div>
 					<div className="arrow-scroll">
@@ -115,7 +131,15 @@ function WhyKachiHealthSection() {
 							data-aos="fade-right"
 							data-aos-anchor-placement="bottom-center"
 						>
-							<Image src={Image03} width={557} height={372} objectFit="contain" alt="hero img" />
+							<Image 
+								src={Image03}
+								width={557}
+								height={372}
+								objectFit="contain"
+								alt="hero img"
+								placeholder="blur"
+								priority
+							/>
 						</div>
 						<div
 							className="order-1 md:order-2 md:ml-20 md:w-1/3"

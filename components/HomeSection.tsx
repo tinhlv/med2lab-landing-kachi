@@ -28,7 +28,15 @@ function Banner() {
 					</div>
 				</div>
 				<div className="hidden md:block" data-aos="fade-in">
-					<Image src={HeroImage} width={720} height={700} objectFit="contain" alt="hero img" />
+					<Image
+						src={HeroImage}
+						width={720}
+						height={700}
+						objectFit="contain"
+						alt="hero img"
+						placeholder="blur"
+						priority
+					/>
 				</div>
 				<div className="arrow-scroll">
 					<a href="#why-kachi-health">
