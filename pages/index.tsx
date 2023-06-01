@@ -8,8 +8,8 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Med2Lab Case Simulation</title>
-        <link rel="icon" href="/pro.ico" />
+        <title>Kachi Health | Unlocking Value in Chronic Disease Management</title>
+        <link rel="icon" href="/favicon.ico" />
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
